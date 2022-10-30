@@ -1,0 +1,66 @@
+<div class="Header">
+  <button (click)="drawToggle()" class="MyPrimary" [disabled]="disableButtons">
+    Walls
+  </button>
+  <button (click)="eraseToggle()" class="MyPrimary" [disabled]="disableButtons">
+    Remove Walls
+  </button>
+  <button
+    (click)="changeStartNodeOption()"
+    class="MyPrimary"
+    [disabled]="disableButtons"
+  >
+    Change Start Node
+  </button>
+  <button
+    (click)="changeEndNodeOption()"
+    class="MyPrimary"
+    [disabled]="disableButtons"
+  >
+    Change End Node
+  </button>
+  <button
+    (click)="dijkstraSearch_A_star_variation()"
+    class="myAlgorithm"
+    [disabled]="disableButtons"
+  >
+    Dijkstra's Algorithm
+  </button>
+
+  <button (click)="RandomWalls()" class="myWalls" [disabled]="disableButtons">
+    Random Walls
+  </button>
+
+  <div class="dropdown">
+    <button class="dropbtn" [disabled]="disableButtons">Sample Mazes</button>
+    <div class="dropdown-content">
+      <button
+        (click)="sampleMaze('assets/Maze1.txt')"
+        class="myWalls"
+        [disabled]="disableButtons"
+      >
+        Sample Maze #1
+      </button>
+      <button
+        (click)="sampleMaze('assets/Maze2.txt')"
+        class="myWalls"
+        [disabled]="disableButtons"
+      >
+        Sample Maze #2
+      </button>
+      <button
+        (click)="sampleMaze('assets/Maze3.txt')"
+        class="myWalls"
+        [disabled]="disableButtons"
+      >
+        Sample Maze #3
+      </button>
+    </div>
+  </div>
+
+  <button (click)="resetGrid()" class="myReset" [disabled]="disableButtons">
+    Reset
+  </button>
+</div>
+
+<canvas id="myCanvas" width="1235" height="520"> </canvas>
